@@ -15,9 +15,9 @@ public class DemoWebElement03 {
         driver.findElement(By.xpath("//button[normalize-space()='Login']")).click();
         String result = driver.findElement(By
                 .xpath("//div[normalize-space()='Invoices Awaiting Payment']/following-sibling::span")).getText();
+        System.out.println(result);
         driver.findElement(By.xpath("//a[normalize-space()='Projects']")).click();
         driver.findElement(By.xpath("//table[@id = 'projects']/tbody/tr[1]/td[3]")).click();
-        System.out.println(result);
         driver.quit();
     }
 }
