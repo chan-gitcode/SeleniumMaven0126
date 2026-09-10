@@ -17,10 +17,11 @@ public class LocatorsHTML {
 
         driver.findElement(By.id("email")).sendKeys("admin@example.com");
         driver.findElement(By.name("password")).sendKeys("123456");
-
 //        driver.findElement(By.tagName("button")).click();
-        driver.findElement(By.xpath("//button[normalize-space()='Login']")).click();
-
+//        driver.findElement(By.xpath("//button[normalize-space()='Login']")).click();
+//        driver.findElement(By.xpath("//button[starts-with(normalize-space(),'Login')]")).click();
+        driver.findElement(By.xpath("//button[@type='submit' and @normalize-space()='Login']")).click();
+        Thread.sleep(5000);
         driver.quit();
     }
 }
