@@ -17,7 +17,11 @@ public class DemoWebElement03 {
                 .xpath("//div[normalize-space()='Invoices Awaiting Payment']/following-sibling::span")).getText();
         System.out.println(result);
         driver.findElement(By.xpath("//a[normalize-space()='Projects']")).click();
-        driver.findElement(By.xpath("//table[@id = 'projects']/tbody/tr[1]/td[3]")).click();
+        Thread.sleep(5000);
+        driver.findElement(By.xpath("//table[@id='projects']/tbody/tr[1]/td[3]")).click();
+        Thread.sleep(5000);
+        String textValue = driver.findElement(By.xpath("//input[@name='company']")).getAttribute("value");
+        System.out.println(textValue);
         driver.quit();
     }
 }
